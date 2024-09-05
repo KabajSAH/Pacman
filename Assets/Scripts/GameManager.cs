@@ -25,6 +25,14 @@ public class GameManager : MonoBehaviour
         SetLives(3);
     }
 
+    private void Update()
+    {
+        if (this.lives <= 0 && Input.anyKeyDown)
+        {
+            NewGame();
+        }
+    }
+
     private void NewRound()
     {
         foreach (Transform pellet in this.pellets)
