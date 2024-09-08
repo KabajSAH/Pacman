@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 120297828976504463}
   - component: {fileID: 4877690677447749895}
   - component: {fileID: 447874450360536267}
+  - component: {fileID: 4588445590420614595}
   - component: {fileID: 7108299691292933423}
   - component: {fileID: 1622652419225420544}
   - component: {fileID: 1535719939360100980}
@@ -181,7 +182,22 @@ MonoBehaviour:
   initialDirection: {x: 1, y: 0, z: 0}
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
+--- !u!114 &4588445590420614595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158717836416811094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ebea66edd8e44dbe5ac0e0ccb0a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialBehaviour: {fileID: 0}
+  target: {fileID: 0}
+  points: 200
 --- !u!114 &7108299691292933423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7360a453e6744b246bddfb2ef5827176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 7
 --- !u!114 &1622652419225420544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17251ebd18df17b45a14c10ee6e8831c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 0
 --- !u!114 &1535719939360100980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42df0d6b5a4ccfa45bd8a636afebcf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 8
 --- !u!114 &5564598403889022764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2851501d843ac4f9240cf288da4407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 20
 --- !u!1 &4959956840810352342
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +332,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4959956840810352342}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -6413954034554347301, guid: 2d8a42e72e6bf0047b515ae400894044, type: 3}
 --- !u!1 &6696774709306069225
 GameObject:
   m_ObjectHideFlags: 0

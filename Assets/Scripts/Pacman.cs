@@ -12,6 +12,7 @@ public class Pacman : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow)) {
             this.movement.SetDirection(Vector3.forward);
         }

@@ -7,10 +7,12 @@ public abstract class GhostBehaviour : MonoBehaviour
     public Ghost ghost { get; private set; }
     public float duration;
 
-    private void awake()
+    private void Awake()
     {
+
         this.ghost = GetComponent<Ghost>();
-        this.enabled = false;
+        Debug.Log("Awake");
+
     }
 
     public void Enable()
