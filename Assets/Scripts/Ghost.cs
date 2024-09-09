@@ -46,9 +46,14 @@ public class Ghost : MonoBehaviour
         {
             this.initialBehaviour.Enable();
         }
-
-       
     }
+
+    public void SetPosition(Vector3 position)
+    {
+        position.y = transform.position.y;
+        transform.position = position;
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -64,6 +69,5 @@ public class Ghost : MonoBehaviour
             }
         }
     }
-
 
 }

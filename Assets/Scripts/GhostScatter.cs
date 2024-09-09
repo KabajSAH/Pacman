@@ -10,7 +10,6 @@ public class GhostScatter : GhostBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Trigger detected with: {other.name}");
         Node node = other.GetComponent<Node>();
 
         if (node != null && this.enabled && !this.ghost.frightened.enabled)

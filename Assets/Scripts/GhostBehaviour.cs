@@ -11,7 +11,6 @@ public abstract class GhostBehaviour : MonoBehaviour
     {
 
         this.ghost = GetComponent<Ghost>();
-        Debug.Log("Awake");
 
     }
 
