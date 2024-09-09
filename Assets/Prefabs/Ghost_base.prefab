@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8818442264019945758}
   - component: {fileID: 2146980155164104677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,14 +84,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7993039969882375100}
   - component: {fileID: 120297828976504463}
-  - component: {fileID: 4877690677447749895}
   - component: {fileID: 447874450360536267}
   - component: {fileID: 4588445590420614595}
   - component: {fileID: 7108299691292933423}
   - component: {fileID: 1622652419225420544}
   - component: {fileID: 1535719939360100980}
   - component: {fileID: 5564598403889022764}
-  m_Layer: 0
+  - component: {fileID: 5507957459342011365}
+  m_Layer: 7
   m_Name: Ghost_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 4158717836416811094}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0073281983, y: -0.00000024502162, z: 0.004740415, w: 0.9999619}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.174, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -144,27 +144,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!135 &4877690677447749895
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4158717836416811094}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &447874450360536267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +229,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 20
+--- !u!136 &5507957459342011365
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158717836416811094}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.38813642
+  m_Height: 1.0926707
+  m_Direction: 1
+  m_Center: {x: -3.395049e-10, y: 0.5669743, z: -0.017000703}
 --- !u!1 &4959956840810352342
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +263,7 @@ GameObject:
   - component: {fileID: 6677901082570295174}
   - component: {fileID: 2221604444299812077}
   - component: {fileID: 4409108487099491868}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2928928642535361654}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1878998440661478633}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
