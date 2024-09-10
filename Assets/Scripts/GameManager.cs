@@ -117,7 +117,12 @@ public class GameManager : MonoBehaviour
 
     public void PowerPelletEaten(PowerPellet powerPellet)
     {
-        //TODO: Implemanting ghosts state
+        for(int i = 0; i < this.ghosts.Length; i++)
+        {
+            this.ghosts[i].frightened.Enable(powerPellet.duration);
+        }
+
+
         PelletEaten(powerPellet);
         CancelInvoke();
         Invoke(nameof(ResetGhostMultiplier), powerPellet.duration); 

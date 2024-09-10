@@ -5,11 +5,11 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public LayerMask obstacleLayer;
-    public List<Vector3> availableDirections { get; private set; }
+    public readonly  List<Vector3> availableDirections = new();
 
     public void Start()
     {
-        this.availableDirections = new List<Vector3>();
+        availableDirections.Clear();
 
         // Vérification des directions dans l'espace 3D
         CheckAvailableDirections(Vector3.forward);  // Z positif
@@ -22,7 +22,7 @@ public class Node : MonoBehaviour
     {
         // Utilisation de BoxCast en 3D pour détecter les obstacles
         RaycastHit hit;
-        bool isHit = Physics.BoxCast(this.transform.position, Vector3.one * 0.5f, direction, out hit, Quaternion.identity, 1.0f, this.obstacleLayer);
+        bool isHit = Physics.BoxCast(this.transform.position, Vector3.one * 0.5f, direction, out hit, Quaternion.identity, 1.2f, this.obstacleLayer);
 
         if (!isHit)
         {

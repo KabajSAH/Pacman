@@ -61,8 +61,13 @@ public class Movement : MonoBehaviour
         this.rigidbody.MovePosition(position + translation);
     }
 
-    public void SetNextDirection(Vector3 newDirection)
+    public void SetNextDirection(Vector3 newDirection, bool forced = false)
     {
+        if (forced || !Occupied(newDirection))
+        {
+            this.direction = newDirection;
+            this.nextDirection = Vector3.zero;
+        }
         this.nextDirection = newDirection;
     }
 

@@ -37,7 +37,7 @@ public class GhostScatter : GhostBehaviour
                 selectedDirection = node.availableDirections[Random.Range(0, node.availableDirections.Count)];
             }
 
-            // Définir la direction suivante du fantôme
+            // Défini la direction suivante du fantôme
             this.ghost.movement.SetNextDirection(selectedDirection);
         }
     }

@@ -116,14 +116,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 07b805cc50f7b21469eb77045e84e87c,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1164090342442655348}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: 07b805cc50f7b21469eb77045e84e87c,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7220977421686351351}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: 07b805cc50f7b21469eb77045e84e87c,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: -2354832979542909091}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 07b805cc50f7b21469eb77045e84e87c,
         type: 3}
@@ -164,60 +156,13 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.55
-  m_Center: {x: 0.000009179115, y: 0.5, z: 0.034521163}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &7308235905141624706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 07b805cc50f7b21469eb77045e84e87c,
     type: 3}
   m_PrefabInstance: {fileID: 7308235905141655842}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &1164090342442655348
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7308235905141624706}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 1
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.5, z: 0}
---- !u!135 &7220977421686351351
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7308235905141624706}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.55
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &-2354832979542909091
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -271,6 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   speedMultiplier: 1
+  initialDirection: {x: 1, y: 0, z: 0}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
