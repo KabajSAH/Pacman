@@ -49,8 +49,7 @@ public class Pacman : MonoBehaviour
 
     public void ResetState()
     {
-        //enabled = true;
-        /*deathSequence.enabled = false;*/
+        enabled = true;
         this.gameObject.SetActive(true);
         movement.ResetState();
     }

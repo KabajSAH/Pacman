@@ -1,9 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 
 
 public class GameManager : MonoBehaviour
 {
+    public string mainMenuSceneName = "MainMenu";
+
     public Ghost[] ghosts;
 
     public Pacman pacman;
@@ -15,6 +20,11 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; }
 
     public int ghostMultiplier { get; private set; } = 1;
+
+    // Variables pour l'UI
+    public Text scoreText;          // Texte du score
+    public Transform livesLayout;   // Layout contenant les vies (objets "Lives")
+    public GameObject livesText;              // Texte des vies
 
     private void Start()
     {
@@ -74,11 +84,33 @@ public class GameManager : MonoBehaviour
     private void SetScore(int score)
     {
         this.score = score;
+        scoreText.text = this.score.ToString();
     }
 
     private void SetLives(int lives)
     {
         this.lives = lives;
+
+        // Supprime toutes les vies affichées
+        foreach (Transform child in livesLayout)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Ajoute les nouvelles vies à afficher
+        for (int i = 0; i < this.lives; i++)
+        {
+            GameObject life = Instantiate(livesText, livesLayout);
+
+            // Assure une taille correcte pour le texte
+            RectTransform rectTransform = life.GetComponent<RectTransform>();
+            if (rectTransform != null)
+            {
+                // Définis une taille par défaut (par exemple, 50x50)
+                rectTransform.sizeDelta = new Vector2(50, 50);
+            }
+
+        }
     }
 
     public void GhostEaten(Ghost ghost)
@@ -146,4 +178,15 @@ public class GameManager : MonoBehaviour
     {
         this.ghostMultiplier = 1;
     }
+    public void SwitchToMainMenu()
+    {
+        SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+
 }

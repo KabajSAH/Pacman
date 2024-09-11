@@ -19,7 +19,7 @@ public class Ghost : MonoBehaviour
 
     private Vector3 lastPosition;
     private float stuckTimer = 0f;
-    private const float stuckThreshold = 1f; // Temps en secondes avant de changer de direction
+    private const float stuckThreshold = 2f; // Temps en secondes avant de changer de direction
 
     public void Awake()
     {
@@ -61,6 +61,7 @@ public class Ghost : MonoBehaviour
     private void Update()
     {
         CheckIfStuck();
+        HandleRotation();
     }
 
     private void CheckIfStuck()
@@ -148,9 +149,20 @@ public class Ghost : MonoBehaviour
 
     public void SetPosition(Vector3 position)
     {
-        // Keep the z-position the same since it determines draw depth
+        
         position.y = transform.position.y;
         transform.position = position;
+    }
+
+    private void HandleRotation()
+    {
+        // Applique la rotation uniquement si la direction change
+        Vector3 direction = movement.direction;
+        if (direction != Vector3.zero)
+        {
+            float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            this.transform.rotation = Quaternion.Euler(0, angle, 0);
+        }
     }
 
 }

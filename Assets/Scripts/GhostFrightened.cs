@@ -68,7 +68,7 @@ public class GhostFrightened : GhostBehaviour
             // Trouve la direction disponible qui éloigne le plus du Pac-Man
             foreach (Vector3 availableDirection in node.availableDirections)
             {
-                Vector3 newPosition = transform.position + availableDirection;
+                Vector3 newPosition = transform.position + new Vector3(availableDirection.x, 0.0f, availableDirection.z); ;
                 float distance = (ghost.target.position - newPosition).sqrMagnitude;
 
                 if (distance > maxDistance)
@@ -93,3 +93,4 @@ public class GhostFrightened : GhostBehaviour
         }
     }
 }
+ 
